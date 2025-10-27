@@ -625,7 +625,7 @@ function App() {
                     <input
                       type="date"
                       id="assemblyDate"
-                      required=false
+                      required={false}
                       value={formData.assemblyDate}
                       onChange={(e) => setFormData({ ...formData, assemblyDate: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
