@@ -4,6 +4,8 @@ import { useState } from 'react';
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hasAssembly, setHasAssembly] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
   const [formData, setFormData] = useState({
     residenceName: '',
     address: '',
@@ -11,19 +13,60 @@ function App() {
     assemblyDate: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', { ...formData, hasAssembly });
-    // TODO: Save to Supabase
-    setIsModalOpen(false);
-    // Reset form
-    setFormData({
-      residenceName: '',
-      address: '',
-      phone: '',
-      assemblyDate: ''
-    });
-    setHasAssembly(false);
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-request`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          residenceName: formData.residenceName,
+          address: formData.address,
+          phone: formData.phone,
+          hasAssembly: hasAssembly,
+          assemblyDate: hasAssembly ? formData.assemblyDate : undefined,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send request');
+      }
+
+      setSubmitMessage({
+        type: 'success',
+        text: 'Votre demande a été envoyée avec succès! Nous vous recontacterons bientôt.'
+      });
+
+      // Reset form after 2 seconds
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setFormData({
+          residenceName: '',
+          address: '',
+          phone: '',
+          assemblyDate: ''
+        });
+        setHasAssembly(false);
+        setSubmitMessage(null);
+      }, 2000);
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: 'Une erreur est survenue. Veuillez réessayer.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -634,19 +677,27 @@ function App() {
                 )}
               </div>
 
+              {submitMessage && (
+                <div className={`p-4 rounded-xl ${submitMessage.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                  {submitMessage.text}
+                </div>
+              )}
+
               <div className="flex gap-4 pt-4">
                 <button
                   type="button"
                   onClick={() => setIsModalOpen(false)}
-                  className="flex-1 bg-slate-100 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-200 transition-all duration-200"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-slate-100 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-200 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Annuler
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30"
+                  disabled={isSubmitting}
+                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Envoyer la demande
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
                 </button>
               </div>
             </form>
