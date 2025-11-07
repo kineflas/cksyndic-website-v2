@@ -1,11 +1,15 @@
 import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X } from 'lucide-react';
 import { useState } from 'react';
+import { BlogSection } from './components/BlogSection';
+import { ArticleDetail } from './components/ArticleDetail';
+import { articles } from './data/articles';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [hasAssembly, setHasAssembly] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     residenceName: '',
     address: '',
@@ -69,6 +73,21 @@ function App() {
     }
   };
 
+  const currentArticle = selectedArticle ? articles.find(a => a.slug === selectedArticle) : null;
+
+  if (currentArticle) {
+    return (
+      <ArticleDetail
+        article={currentArticle}
+        onBack={() => setSelectedArticle(null)}
+        onQuoteClick={() => {
+          setSelectedArticle(null);
+          setIsModalOpen(true);
+        }}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50">
       {/* Header */}
@@ -84,6 +103,7 @@ function App() {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Services</a>
               <a href="#advantages" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Avantages</a>
+              <a href="#blog" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Blog</a>
               <a href="#contact" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
               <button
                 onClick={() => setIsModalOpen(true)}
@@ -528,6 +548,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Blog Section */}
+      <BlogSection onArticleClick={(slug) => setSelectedArticle(slug)} />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-20">
