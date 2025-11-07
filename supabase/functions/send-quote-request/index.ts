@@ -6,8 +6,8 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-const EMAIL_TO = "contact@cksyndic.ma";
+const RESEND_API_KEY = "re_JbzP8TqU_MPCdcHT26tPwExt6vqjZbpCx";
+const EMAIL_TO = "khalidborntocode@gmail.com";
 
 interface QuoteRequest {
   residenceName: string;
