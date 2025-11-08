@@ -89,25 +89,22 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-primary-50">
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <div className="bg-blue-600 rounded-xl p-2.5">
-                <Building2 className="w-6 h-6 text-white" strokeWidth={2.5} />
-              </div>
-              <span className="text-2xl font-bold text-slate-900">CK Syndic</span>
+              <img src="/logock.png" alt="CK Syndic" className="h-12 w-auto" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Services</a>
-              <a href="#advantages" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Avantages</a>
-              <a href="#blog" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Blog</a>
-              <a href="#contact" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
+              <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
+              <a href="#advantages" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Avantages</a>
+              <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Blog</a>
+              <a href="#contact" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-blue-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30"
+                className="bg-primary-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
               >
                 Devis Gratuit
               </button>
@@ -120,13 +117,13 @@ function App() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full border border-blue-200">
-              <Star className="w-4 h-4 fill-blue-700" />
+            <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full border border-primary-200">
+              <Star className="w-4 h-4 fill-primary-700" />
               <span className="text-sm font-semibold">Solution de gestion N°1 au Maroc</span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-              Gestion de syndic <span className="text-blue-600">simplifiée</span>
+              Gestion de syndic <span className="text-primary-600">simplifiée</span>
             </h1>
 
             <p className="text-xl text-slate-600 leading-relaxed">
@@ -137,22 +134,22 @@ function App() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all duration-200 shadow-xl shadow-blue-600/30 hover:shadow-2xl hover:shadow-blue-600/40 flex items-center space-x-2"
+                className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 flex items-center space-x-2"
               >
                 <span>Démarrer maintenant</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold border-2 border-blue-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
+              <button className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200">
                 Découvrir nos services
               </button>
             </div>
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 shadow-2xl">
+            <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl p-8 shadow-2xl">
               <div className="bg-white rounded-2xl p-6 space-y-4 shadow-xl">
                 <div className="flex items-center space-x-3">
-                  <div className="bg-blue-600 rounded-xl p-2.5">
+                  <div className="bg-primary-600 rounded-xl p-2.5">
                     <Building2 className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -166,13 +163,13 @@ function App() {
                     <span className="text-slate-800 font-medium">Charges payées</span>
                     <CheckCircle2 className="w-6 h-6 text-green-600" />
                   </div>
-                  <div className="flex items-center justify-between bg-blue-50 p-4 rounded-xl border border-blue-200">
+                  <div className="flex items-center justify-between bg-primary-50 p-4 rounded-xl border border-primary-200">
                     <span className="text-slate-800 font-medium">Piscine entretenue</span>
-                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
+                    <CheckCircle2 className="w-6 h-6 text-primary-600" />
                   </div>
-                  <div className="flex items-center justify-between bg-blue-50 p-4 rounded-xl border border-blue-200">
+                  <div className="flex items-center justify-between bg-primary-50 p-4 rounded-xl border border-primary-200">
                     <span className="text-slate-800 font-medium">Sécurité 24/7</span>
-                    <CheckCircle2 className="w-6 h-6 text-blue-600" />
+                    <CheckCircle2 className="w-6 h-6 text-primary-600" />
                   </div>
                 </div>
               </div>
@@ -205,7 +202,7 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-blue-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Transparence Totale</h3>
@@ -215,7 +212,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-blue-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Équipe Expérimentée</h3>
@@ -225,7 +222,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-blue-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
                 <CheckCircle2 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Conformité Légale</h3>
@@ -235,7 +232,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-blue-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Réactivité</h3>
@@ -248,7 +245,7 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-b from-slate-50 to-blue-50">
+      <section id="services" className="py-20 bg-gradient-to-b from-slate-50 to-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">Nos Services</h2>
@@ -259,150 +256,150 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Building2 className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Building2 className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Gestion Administrative</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Assemblées générales et procès-verbaux</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Gestion des charges et recouvrement</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Comptabilité et budgets prévisionnels</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Suivi des travaux et contrats</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Sparkles className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Sparkles className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Ménage & Nettoyage</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Nettoyage quotidien des parties communes</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Entretien des halls et escaliers</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Nettoyage des vitres et façades</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Service de nettoyage après travaux</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Droplets className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Droplets className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Entretien Piscines</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Traitement et équilibrage de l'eau</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Nettoyage et aspiration du bassin</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Maintenance du système de filtration</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Contrôle mensuel et rapports détaillés</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Home className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Home className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Jardinage & Espaces Verts</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Tonte et entretien des pelouses</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Taille des haies et arbustes</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Arrosage et fertilisation</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Plantations saisonnières</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Shield className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Shield className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Sécurité & Gardiennage</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Service de gardiennage 24/7</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Contrôle d'accès et surveillance</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Rondes de sécurité régulières</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Gestion des interventions d'urgence</span>
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
-              <div className="bg-blue-100 rounded-2xl p-4 w-fit mb-6">
-                <Wrench className="w-10 h-10 text-blue-600" />
+              <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
+                <Wrench className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Maintenance Technique</h3>
               <ul className="space-y-4">
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Entretien ascenseurs et équipements</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Plomberie et électricité</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Climatisation et chauffage</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Réparations et dépannages rapides</span>
                 </li>
               </ul>
@@ -424,9 +421,9 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -439,9 +436,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -454,9 +451,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -469,9 +466,9 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-2xl p-8 border border-blue-100">
+              <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-blue-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -497,7 +494,7 @@ function App() {
                     type="text"
                     id="name"
                     placeholder="Votre nom"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -509,7 +506,7 @@ function App() {
                     type="email"
                     id="email"
                     placeholder="votre@email.com"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -521,7 +518,7 @@ function App() {
                     type="tel"
                     id="phone"
                     placeholder="+212 6XX XX XX XX"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                   />
                 </div>
 
@@ -533,13 +530,13 @@ function App() {
                     id="message"
                     rows={5}
                     placeholder="Décrivez votre besoin..."
-                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40"
+                  className="w-full bg-primary-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30 hover:shadow-xl hover:shadow-primary-600/40"
                 >
                   Envoyer le message
                 </button>
@@ -553,17 +550,17 @@ function App() {
       <BlogSection onArticleClick={(slug) => setSelectedArticle(slug)} />
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-20">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-700 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Prêt à Confier la Gestion de Votre Copropriété ?
           </h2>
-          <p className="text-xl text-blue-100 mb-10">
+          <p className="text-xl text-primary-100 mb-10">
             Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all duration-200 shadow-2xl hover:shadow-3xl inline-flex items-center space-x-2"
+            className="bg-white text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-50 transition-all duration-200 shadow-2xl hover:shadow-3xl inline-flex items-center space-x-2"
           >
             <span>Demander un Devis Gratuit</span>
             <ArrowRight className="w-5 h-5" />
@@ -577,7 +574,7 @@ function App() {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="bg-blue-600 rounded-xl p-2.5">
+                <div className="bg-primary-600 rounded-xl p-2.5">
                   <Building2 className="w-6 h-6 text-white" strokeWidth={2.5} />
                 </div>
                 <span className="text-2xl font-bold text-white">CK Syndic</span>
@@ -635,7 +632,7 @@ function App() {
                   value={formData.residenceName}
                   onChange={(e) => setFormData({ ...formData, residenceName: e.target.value })}
                   placeholder="Ex: Résidence Al Manar"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -650,7 +647,7 @@ function App() {
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   placeholder="Adresse complète de la résidence"
                   rows={3}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all resize-none"
                 ></textarea>
               </div>
 
@@ -665,7 +662,7 @@ function App() {
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   placeholder="+212 6XX XX XX XX"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                 />
               </div>
 
@@ -676,7 +673,7 @@ function App() {
                     id="hasAssembly"
                     checked={hasAssembly}
                     onChange={(e) => setHasAssembly(e.target.checked)}
-                    className="w-5 h-5 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-600 cursor-pointer"
+                    className="w-5 h-5 rounded border-slate-300 text-primary-600 focus:ring-2 focus:ring-primary-600 cursor-pointer"
                   />
                   <label htmlFor="hasAssembly" className="text-sm font-semibold text-slate-900 cursor-pointer">
                     Une assemblée générale est prévue
@@ -694,7 +691,7 @@ function App() {
                       required={false}
                       value={formData.assemblyDate}
                       onChange={(e) => setFormData({ ...formData, assemblyDate: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-300 bg-white text-slate-900 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:border-transparent transition-all"
                     />
                   </div>
                 )}
@@ -718,7 +715,7 @@ function App() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="flex-1 bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande'}
                 </button>

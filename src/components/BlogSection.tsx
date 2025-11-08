@@ -9,7 +9,7 @@ export function BlogSection({ onArticleClick }: BlogSectionProps) {
   return (
     <section id="blog" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full border border-blue-200 mb-6">
+        <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full border border-primary-200 mb-6">
           <BookOpen className="w-4 h-4" />
           <span className="text-sm font-semibold">Blog & Conseils</span>
         </div>
@@ -28,7 +28,7 @@ export function BlogSection({ onArticleClick }: BlogSectionProps) {
             className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
             onClick={() => onArticleClick(article.slug)}
           >
-            <div className="bg-gradient-to-br from-blue-600 to-blue-700 h-48 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-primary-600 to-primary-700 h-48 flex items-center justify-center">
               <BookOpen className="w-16 h-16 text-white opacity-80" />
             </div>
             <div className="p-6">
@@ -36,13 +36,13 @@ export function BlogSection({ onArticleClick }: BlogSectionProps) {
                 <Calendar className="w-4 h-4" />
                 <span>{new Date(article.publishedAt).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors">
                 {article.title}
               </h3>
               <p className="text-slate-600 mb-4 line-clamp-3">
                 {article.metaDescription}
               </p>
-              <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
+              <div className="flex items-center text-primary-600 font-semibold group-hover:text-primary-700">
                 <span>Lire l'article</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>

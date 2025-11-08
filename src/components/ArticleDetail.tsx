@@ -49,7 +49,7 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
           <ul key={index} className="space-y-3 mb-6">
             {section.items?.map((item, i) => (
               <li key={i} className="flex items-start space-x-3">
-                <span className="flex-shrink-0 w-2 h-2 bg-blue-600 rounded-full mt-2"></span>
+                <span className="flex-shrink-0 w-2 h-2 bg-primary-600 rounded-full mt-2"></span>
                 <span className="text-lg text-slate-700">{item}</span>
               </li>
             ))}
@@ -65,15 +65,15 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <button
           onClick={onBack}
-          className="inline-flex items-center space-x-2 text-slate-600 hover:text-blue-600 mb-8 transition-colors"
+          className="inline-flex items-center space-x-2 text-slate-600 hover:text-primary-600 mb-8 transition-colors"
         >
           <ArrowLeft className="w-5 h-5" />
           <span className="font-semibold">Retour aux articles</span>
         </button>
 
         <article className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 px-8 py-16 text-white">
-            <div className="flex items-center space-x-2 text-blue-100 mb-4">
+          <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white">
+            <div className="flex items-center space-x-2 text-primary-100 mb-4">
               <Calendar className="w-5 h-5" />
               <span>
                 {new Date(article.publishedAt).toLocaleDateString('fr-FR', {
@@ -84,14 +84,14 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{article.title}</h1>
-            <p className="text-xl text-blue-100">{article.metaDescription}</p>
+            <p className="text-xl text-primary-100">{article.metaDescription}</p>
           </div>
 
           <div className="px-8 py-12">
             {article.content.map((section, index) => renderSection(section, index))}
 
             <div className="mt-12 pt-8 border-t border-slate-200">
-              <div className="bg-blue-50 rounded-2xl p-8 text-center">
+              <div className="bg-primary-50 rounded-2xl p-8 text-center">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   Besoin d'un syndic professionnel ?
                 </h3>
@@ -100,7 +100,7 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
                 </p>
                 <button
                   onClick={onQuoteClick}
-                  className="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg shadow-blue-600/30"
+                  className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-blue-600/30"
                 >
                   Demander un devis gratuit
                 </button>
@@ -118,7 +118,7 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
                     });
                   }
                 }}
-                className="inline-flex items-center space-x-2 text-slate-600 hover:text-blue-600 transition-colors"
+                className="inline-flex items-center space-x-2 text-slate-600 hover:text-primary-600 transition-colors"
               >
                 <Share2 className="w-5 h-5" />
                 <span>Partager cet article</span>
