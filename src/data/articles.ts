@@ -349,5 +349,296 @@ export const articles: Article[] = [
         content: 'Une gestion proactive permet de limiter les impayés et d\'assurer le bon fonctionnement de la copropriété. CK Syndic accompagne ses clients pour une gestion transparente et efficace.'
       }
     ]
+  },
+  {
+    id: '6',
+    slug: 'election-syndic-assemblee-generale',
+    title: 'Élection du syndic en assemblée générale : mode d\'emploi',
+    seoTitle: 'Élection du syndic en copropriété',
+    metaDescription: 'Comment se déroule l\'élection du syndic lors de l\'assemblée générale au Maroc et quelles règles suivre.',
+    publishedAt: '2025-01-10',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'L\'élection du syndic est un moment clé de la vie de la copropriété. Elle se déroule chaque année lors de l\'assemblée générale ordinaire (AGO) et garantit la transparence et le bon fonctionnement de la résidence.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Candidats possibles'
+      },
+      {
+        type: 'list',
+        items: [
+          'Syndic bénévole : copropriétaire de l\'immeuble',
+          'Syndic professionnel : société spécialisée, expérimentée et disponible'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Déroulement'
+      },
+      {
+        type: 'list',
+        items: [
+          'Présentation des offres et des services proposés',
+          'Vote à la majorité absolue des copropriétaires présents ou représentés',
+          'Rédaction et signature du procès-verbal',
+          'Mandat en général de 1 an renouvelable'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Points à vérifier avant de voter'
+      },
+      {
+        type: 'list',
+        items: [
+          'Contrat de gestion et services inclus',
+          'Tarifs et modalités de paiement',
+          'Références et expérience du syndic',
+          'Conditions de résiliation ou renouvellement'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'L\'élection d\'un syndic compétent garantit une gestion rigoureuse et transparente. CK Syndic propose des contrats clairs et adaptés à chaque copropriété à Marrakech et au Maroc.'
+      }
+    ]
+  },
+  {
+    id: '7',
+    slug: 'transparence-financiere-comptes-syndic',
+    title: 'Transparence financière : comment s\'assurer que les comptes du syndic sont bien gérés',
+    seoTitle: 'Contrôle des comptes du syndic au Maroc',
+    metaDescription: 'Assurez-vous de la bonne gestion financière de votre copropriété grâce aux conseils pour contrôler les comptes du syndic.',
+    publishedAt: '2025-01-09',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'La confiance entre copropriétaires et syndic repose sur une gestion financière transparente. Des comptes clairs évitent les malentendus et assurent un suivi efficace du budget.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Rôle du syndic'
+      },
+      {
+        type: 'list',
+        items: [
+          'Comptabilité détaillée et séparée',
+          'Bilans annuels présentés à l\'AG',
+          'Justification des dépenses et travaux',
+          'Gestion des fonds de réserve'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Contrôle par les copropriétaires'
+      },
+      {
+        type: 'list',
+        items: [
+          'Consultation des relevés bancaires',
+          'Accès aux factures et devis',
+          'Vérification par le conseil syndical',
+          'Plateforme en ligne si disponible pour suivi en temps réel'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Recours en cas de doute'
+      },
+      {
+        type: 'list',
+        items: [
+          'Demander un audit externe',
+          'Discuter lors de l\'AG',
+          'Remplacement du syndic en cas de manquement'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'La transparence financière est essentielle pour une copropriété saine et durable. CK Syndic assure un suivi clair et régulier des comptes pour la tranquillité des copropriétaires.'
+      }
+    ]
+  },
+  {
+    id: '8',
+    slug: 'responsabilite-syndic-engagement-maroc',
+    title: 'Responsabilité du syndic : jusqu\'où va son engagement au Maroc',
+    seoTitle: 'Responsabilité du syndic de copropriété',
+    metaDescription: 'Comprendre les responsabilités légales du syndic au Maroc et les recours possibles en cas de manquement.',
+    publishedAt: '2025-01-08',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Le syndic est le représentant légal du syndicat des copropriétaires et assume plusieurs responsabilités légales. Une bonne compréhension de ces responsabilités aide les copropriétaires à savoir quand et comment intervenir.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Missions principales'
+      },
+      {
+        type: 'list',
+        items: [
+          'Exécution des décisions de l\'AG',
+          'Gestion financière et travaux',
+          'Entretien des parties communes',
+          'Représentation légale de la copropriété'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Types de responsabilité'
+      },
+      {
+        type: 'list',
+        items: [
+          'Civile : faute de gestion ou négligence',
+          'Pénale : fraude, détournement de fonds',
+          'Contractuelle : non-respect du contrat de syndic'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Protection et prévention'
+      },
+      {
+        type: 'list',
+        items: [
+          'Assurance responsabilité civile professionnelle',
+          'Comptabilité transparente et rapports réguliers',
+          'Respect du règlement et des décisions prises en AG'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Recours des copropriétaires'
+      },
+      {
+        type: 'list',
+        items: [
+          'Remplacement du syndic',
+          'Vérification des comptes via audit',
+          'Action en justice en cas de faute grave'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'Le rôle du syndic est de confiance. CK Syndic respecte les obligations légales et assure une gestion sécurisée et fiable pour ses clients.'
+      }
+    ]
+  },
+  {
+    id: '9',
+    slug: 'conseils-bonne-entente-copropriete',
+    title: '5 conseils pour une bonne entente entre copropriétaires au quotidien',
+    seoTitle: 'Conseils pour vivre en harmonie en copropriété',
+    metaDescription: '5 conseils pratiques pour améliorer l\'entente entre copropriétaires et éviter les conflits au Maroc.',
+    publishedAt: '2025-01-07',
+    content: [
+      {
+        type: 'paragraph',
+        content: 'Une bonne entente entre copropriétaires garantit la sérénité et l\'efficacité de la gestion. Voici cinq conseils pratiques pour améliorer la vie collective en copropriété.'
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: '1. Respecter le règlement intérieur'
+      },
+      {
+        type: 'list',
+        items: [
+          'Respect des horaires de travaux',
+          'Stationnement correct',
+          'Bruit et animaux maîtrisés'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: '2. Communiquer avant de se plaindre'
+      },
+      {
+        type: 'list',
+        items: [
+          'Parler directement avec le voisin concerné',
+          'Informer le syndic si nécessaire',
+          'Chercher la conciliation plutôt que la confrontation'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: '3. Participer aux assemblées générales'
+      },
+      {
+        type: 'list',
+        items: [
+          'Exprimer son avis',
+          'Comprendre les décisions votées',
+          'Voter en connaissance de cause'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: '4. Maintenir les espaces communs propres'
+      },
+      {
+        type: 'list',
+        items: [
+          'Escaliers, parkings, ascenseurs',
+          'Chacun doit contribuer à l\'entretien',
+          'Signaler tout problème rapidement au syndic'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: '5. Choisir un syndic à l\'écoute'
+      },
+      {
+        type: 'list',
+        items: [
+          'Réactif et disponible',
+          'Suivi personnalisé',
+          'Gestion transparente et régulière des comptes'
+        ]
+      },
+      {
+        type: 'heading',
+        level: 2,
+        content: 'Conclusion'
+      },
+      {
+        type: 'paragraph',
+        content: 'Avec une communication ouverte et un syndic compétent comme CK Syndic, la vie en copropriété devient harmonieuse, agréable et sécurisée.'
+      }
+    ]
   }
 ];
