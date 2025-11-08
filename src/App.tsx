@@ -98,13 +98,13 @@ function App() {
               <img src="/logock.png" alt="CK Syndic" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} />
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
-              <a href="#advantages" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Avantages</a>
-              <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Blog</a>
-              <a href="#contact" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+              <a href="#services" className="text-slate-700 hover:text-accent-600 font-medium transition-colors">Services</a>
+              <a href="#advantages" className="text-slate-700 hover:text-accent-600 font-medium transition-colors">Avantages</a>
+              <a href="#blog" className="text-slate-700 hover:text-accent-600 font-medium transition-colors">Blog</a>
+              <a href="#contact" className="text-slate-700 hover:text-accent-600 font-medium transition-colors">Contact</a>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-primary-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
+                className="bg-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-accent-700 transition-all duration-200 shadow-lg shadow-accent-600/30"
               >
                 Devis Gratuit
               </button>
@@ -118,7 +118,7 @@ function App() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full border border-primary-200">
-              <Star className="w-4 h-4 fill-primary-700" />
+              <Star className="w-4 h-4 fill-accent-600" />
               <span className="text-sm font-semibold">Solution de gestion N°1 au Maroc</span>
             </div>
 
@@ -134,7 +134,7 @@ function App() {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 flex items-center space-x-2"
+                className="bg-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-accent-700 transition-all duration-200 shadow-xl shadow-accent-600/30 hover:shadow-2xl hover:shadow-accent-600/40 flex items-center space-x-2"
               >
                 <span>Démarrer maintenant</span>
                 <ArrowRight className="w-5 h-5" />
@@ -165,11 +165,11 @@ function App() {
                   </div>
                   <div className="flex items-center justify-between bg-primary-50 p-4 rounded-xl border border-primary-200">
                     <span className="text-slate-800 font-medium">Piscine entretenue</span>
-                    <CheckCircle2 className="w-6 h-6 text-primary-600" />
+                    <CheckCircle2 className="w-6 h-6 text-accent-600" />
                   </div>
                   <div className="flex items-center justify-between bg-primary-50 p-4 rounded-xl border border-primary-200">
                     <span className="text-slate-800 font-medium">Sécurité 24/7</span>
-                    <CheckCircle2 className="w-6 h-6 text-primary-600" />
+                    <CheckCircle2 className="w-6 h-6 text-accent-600" />
                   </div>
                 </div>
               </div>
@@ -202,7 +202,7 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-accent-600 rounded-xl p-4 w-fit mb-6">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Transparence Totale</h3>
@@ -212,7 +212,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-accent-600 rounded-xl p-4 w-fit mb-6">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Équipe Expérimentée</h3>
@@ -222,7 +222,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-accent-600 rounded-xl p-4 w-fit mb-6">
                 <CheckCircle2 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Conformité Légale</h3>
@@ -232,7 +232,7 @@ function App() {
             </div>
 
             <div className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border border-slate-100">
-              <div className="bg-primary-600 rounded-xl p-4 w-fit mb-6">
+              <div className="bg-accent-600 rounded-xl p-4 w-fit mb-6">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Réactivité</h3>
@@ -257,7 +257,7 @@ function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Building2 className="w-10 h-10 text-primary-600" />
+                <Building2 className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Gestion Administrative</h3>
               <ul className="space-y-4">
@@ -282,7 +282,7 @@ function App() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Sparkles className="w-10 h-10 text-primary-600" />
+                <Sparkles className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Ménage & Nettoyage</h3>
               <ul className="space-y-4">
@@ -307,7 +307,7 @@ function App() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Droplets className="w-10 h-10 text-primary-600" />
+                <Droplets className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Entretien Piscines</h3>
               <ul className="space-y-4">
@@ -332,7 +332,7 @@ function App() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Home className="w-10 h-10 text-primary-600" />
+                <Home className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Jardinage & Espaces Verts</h3>
               <ul className="space-y-4">
@@ -357,7 +357,7 @@ function App() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Shield className="w-10 h-10 text-primary-600" />
+                <Shield className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Sécurité & Gardiennage</h3>
               <ul className="space-y-4">
@@ -382,7 +382,7 @@ function App() {
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
               <div className="bg-primary-100 rounded-2xl p-4 w-fit mb-6">
-                <Wrench className="w-10 h-10 text-primary-600" />
+                <Wrench className="w-10 h-10 text-accent-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Maintenance Technique</h3>
               <ul className="space-y-4">
@@ -423,7 +423,7 @@ function App() {
             <div className="space-y-6">
               <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-accent-600 rounded-xl p-3 flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -438,7 +438,7 @@ function App() {
 
               <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-accent-600 rounded-xl p-3 flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -453,7 +453,7 @@ function App() {
 
               <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-accent-600 rounded-xl p-3 flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -468,7 +468,7 @@ function App() {
 
               <div className="bg-primary-50 rounded-2xl p-8 border border-primary-100">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-primary-600 rounded-xl p-3 flex-shrink-0">
+                  <div className="bg-accent-600 rounded-xl p-3 flex-shrink-0">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
