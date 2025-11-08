@@ -95,7 +95,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <img src="/logock.png" alt="CK Syndic" className="h-12 w-auto" />
+              <img src="/logock.png" alt="CK Syndic" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
