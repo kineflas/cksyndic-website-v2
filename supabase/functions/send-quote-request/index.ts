@@ -7,7 +7,7 @@ const corsHeaders = {
 };
 
 const RESEND_API_KEY = "re_JbzP8TqU_MPCdcHT26tPwExt6vqjZbpCx";
-const EMAIL_TO = "khalidborntocode@gmail.com";
+const EMAIL_TO = "contact@cksyndic.ma";
 
 interface QuoteRequest {
   residenceName: string;
