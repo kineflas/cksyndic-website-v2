@@ -14,10 +14,10 @@ export function BlogSection({ onArticleClick }: BlogSectionProps) {
           <span className="text-sm font-semibold">Blog & Conseils</span>
         </div>
         <h2 className="text-4xl font-bold text-slate-900 mb-4">
-          Guides et Conseils pour la Copropriété
+          Guides et Conseils en Gestion de Copropriété au Maroc
         </h2>
         <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-          Découvrez nos articles pour tout savoir sur la gestion de copropriété au Maroc
+          Découvrez nos articles et conseils pratiques sur la gestion de copropriété, le rôle du syndic et la réglementation au Maroc
         </p>
       </div>
 
