@@ -139,7 +139,7 @@ Deno.serve(async (req: Request) => {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "CK Syndic <onboarding@resend.dev>",
+        from: "CK Syndic <contact@cksyndic.ma>",
         to: [EMAIL_TO],
         subject: `Nouvelle demande de devis - ${residenceName}`,
         html: emailHtml,
