@@ -160,7 +160,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Équipe Expérimentée</h3>
               <p className="text-slate-600 leading-relaxed">
-                Plus de 15 ans d'expérience dans la gestion de copropriétés à Marrakech et au Maroc. Une équipe de syndic dédiée et réactive.
+                Une équipe dynamique et multidisciplinaire, composée de spécialistes en gestion de copropriété, maintenance, sécurité et services résidentiels, prête à répondre à tous vos besoins avec efficacité et professionnalisme.
               </p>
             </div>
 
