@@ -95,7 +95,7 @@ function App() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <img src="/logock.png" alt="CK Syndic" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} />
+              <img src="/logock.png" alt="CK Syndic - Syndic professionnel à Marrakech" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
@@ -119,16 +119,16 @@ function App() {
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 bg-primary-50 text-primary-700 px-4 py-2 rounded-full border border-primary-200">
               <Star className="w-4 h-4 fill-primary-700" />
-              <span className="text-sm font-semibold">Solution de gestion N°1 au Maroc</span>
+              <span className="text-sm font-semibold">Syndic professionnel N°1 à Marrakech</span>
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
-              Gestion de syndic <span className="text-primary-600">simplifiée</span>
+              Syndic professionnel à <span className="text-primary-600">Marrakech</span>
             </h1>
 
             <p className="text-xl text-slate-600 leading-relaxed">
-              Nous prenons en charge la gestion complète de votre copropriété avec professionnalisme,
-              transparence et réactivité. Des services de qualité pour votre tranquillité d'esprit.
+              CK Syndic prend en charge la gestion complète de votre copropriété à Marrakech avec professionnalisme,
+              transparence et réactivité. Un syndic de confiance pour la gestion de votre résidence au Maroc.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -154,7 +154,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="font-bold text-slate-900">Résidence Al Manar</h3>
-                    <p className="text-sm text-slate-600">Casablanca</p>
+                    <p className="text-sm text-slate-600">Marrakech</p>
                   </div>
                 </div>
 
@@ -194,9 +194,9 @@ function App() {
       <section id="advantages" className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Pourquoi Nous Faire Confiance?</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Pourquoi Choisir CK Syndic à Marrakech ?</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Notre expertise et notre engagement font de nous le partenaire idéal pour la gestion de votre copropriété
+              Notre expertise en gestion de copropriété et notre engagement font de CK Syndic le partenaire idéal pour votre résidence à Marrakech
             </p>
           </div>
 
@@ -207,7 +207,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Transparence Totale</h3>
               <p className="text-slate-600 leading-relaxed">
-                Accès en ligne 24/7 à tous vos documents, comptes et rapports. Une gestion claire et traçable.
+                Accès en ligne 24/7 à tous vos documents, comptes et rapports de copropriété. Une gestion de syndic claire et traçable.
               </p>
             </div>
 
@@ -217,7 +217,7 @@ function App() {
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">Équipe Expérimentée</h3>
               <p className="text-slate-600 leading-relaxed">
-                Plus de 15 ans d'expérience dans la gestion de copropriétés au Maroc. Une équipe dédiée et réactive.
+                Plus de 15 ans d'expérience dans la gestion de copropriétés à Marrakech et au Maroc. Une équipe de syndic dédiée et réactive.
               </p>
             </div>
 
@@ -248,9 +248,9 @@ function App() {
       <section id="services" className="py-20 bg-gradient-to-b from-slate-50 to-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Nos Services</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Nos Services de Gestion de Copropriété</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Une gamme complète de services pour l'entretien et la gestion de votre résidence
+              Une gamme complète de services de syndic professionnel pour l'entretien et la gestion de votre résidence à Marrakech
             </p>
           </div>
 
@@ -412,9 +412,9 @@ function App() {
       <section id="contact" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Contactez-Nous</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Contactez Votre Syndic à Marrakech</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Notre équipe est à votre disposition pour répondre à toutes vos questions
+              Notre équipe de syndic professionnel est à votre disposition pour répondre à toutes vos questions sur la gestion de copropriété
             </p>
           </div>
 
@@ -430,7 +430,7 @@ function App() {
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Adresse</h3>
                     <p className="text-slate-700 leading-relaxed">
                       Boulevard Mohamed V<br />
-                      Casablanca, Maroc
+                      Marrakech, Maroc
                     </p>
                   </div>
                 </div>
@@ -553,10 +553,10 @@ function App() {
       <section className="bg-gradient-to-br from-primary-600 to-primary-700 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Prêt à Confier la Gestion de Votre Copropriété ?
+            Prêt à Confier la Gestion de Votre Copropriété à Marrakech ?
           </h2>
           <p className="text-xl text-primary-100 mb-10">
-            Contactez-nous dès aujourd'hui pour un devis gratuit et personnalisé
+            Contactez CK Syndic dès aujourd'hui pour un devis gratuit et personnalisé de gestion de copropriété
           </p>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -580,7 +580,7 @@ function App() {
                 <span className="text-2xl font-bold text-white">CK Syndic</span>
               </div>
               <p className="text-slate-400 leading-relaxed">
-                Solution de gestion de syndic professionnelle et transparente au Maroc.
+                CK Syndic, votre syndic professionnel à Marrakech. Gestion de copropriété transparente et services de qualité pour votre résidence au Maroc.
               </p>
             </div>
             <div>
@@ -594,14 +594,14 @@ function App() {
             <div>
               <h4 className="text-white font-bold mb-4">Contact</h4>
               <ul className="space-y-2">
-                <li className="text-slate-400">Casablanca, Maroc</li>
+                <li className="text-slate-400">Marrakech, Maroc</li>
                 <li className="text-slate-400">contact@cksyndic.ma</li>
                 <li className="text-slate-400">+212 5XX-XXXXXX</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
-            <p>&copy; 2025 CK Syndic. Tous droits réservés.</p>
+            <p>&copy; 2025 CK Syndic Marrakech. Tous droits réservés.</p>
           </div>
         </div>
       </footer>
