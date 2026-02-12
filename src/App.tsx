@@ -1,6 +1,6 @@
 import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
 import { BlogPage } from './components/BlogPage';
 import { ArticlePage } from './components/ArticlePage';
@@ -20,10 +20,10 @@ function ScrollToHash() {
 
 function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
   useEffect(() => {
-    document.title = 'CK Syndic Marrakech | Syndic Professionnel & Gestion de Copropriété au Maroc';
+    document.title = 'CK Syndic Marrakech | Gestion de Copropriété';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'CK Syndic, votre syndic professionnel à Marrakech. Gestion de copropriété transparente, entretien des résidences, sécurité et maintenance. Demandez un devis gratuit.');
+      metaDescription.setAttribute('content', 'CK Syndic, syndic professionnel à Marrakech. Gestion de copropriété transparente, entretien et sécurité de résidences. Devis gratuit.');
     }
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
@@ -529,9 +529,10 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div>
               <h4 className="text-white font-bold mb-4">Services</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Gestion Administrative</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Entretien & Maintenance</a></li>
-                <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Sécurité</a></li>
+                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Gestion Administrative</a></li>
+                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Entretien & Maintenance</a></li>
+                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Sécurité</a></li>
+                <li><Link to="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</Link></li>
               </ul>
             </div>
             <div>
