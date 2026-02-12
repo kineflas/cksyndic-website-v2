@@ -372,8 +372,8 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Adresse</h3>
                     <p className="text-slate-700 leading-relaxed">
-                      Boulevard Mohamed V<br />
-                      Marrakech, Maroc
+                      461 Al Massar, bureau N1<br />
+                      Marrakech 4000, Maroc
                     </p>
                   </div>
                 </div>
@@ -387,8 +387,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Téléphone</h3>
                     <p className="text-slate-700 leading-relaxed">
-                      +212 5 22 XX XX XX<br />
-                      +212 6 XX XX XX XX
+                      07 14 58 55 57
                     </p>
                   </div>
                 </div>
@@ -402,8 +401,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Email</h3>
                     <p className="text-slate-700 leading-relaxed">
-                      contact@cksyndic.ma<br />
-                      info@cksyndic.ma
+                      contact@cksyndic.ma
                     </p>
                   </div>
                 </div>
@@ -538,9 +536,9 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div>
               <h4 className="text-white font-bold mb-4">Contact</h4>
               <ul className="space-y-2">
-                <li className="text-slate-400">Marrakech, Maroc</li>
+                <li className="text-slate-400">461 Al Massar, bureau N1, Marrakech 4000</li>
                 <li className="text-slate-400">contact@cksyndic.ma</li>
-                <li className="text-slate-400">+212 5XX-XXXXXX</li>
+                <li className="text-slate-400">07 14 58 55 57</li>
               </ul>
             </div>
           </div>
