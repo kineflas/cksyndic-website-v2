@@ -10,7 +10,7 @@ export interface Article {
 
 export interface ArticleSection {
   type: 'heading' | 'paragraph' | 'list';
-  content: string;
+  content?: string;
   level?: number;
   items?: string[];
 }

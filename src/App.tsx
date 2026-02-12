@@ -1,92 +1,35 @@
 import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
-import { ArticleDetail } from './components/ArticleDetail';
-import { articles } from './data/articles';
+import { BlogPage } from './components/BlogPage';
+import { ArticlePage } from './components/ArticlePage';
 
-function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [hasAssembly, setHasAssembly] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [formData, setFormData] = useState({
-    residenceName: '',
-    address: '',
-    phone: '',
-    assemblyDate: ''
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitMessage(null);
-
-    try {
-      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-request`;
-
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify({
-          residenceName: formData.residenceName,
-          address: formData.address,
-          phone: formData.phone,
-          hasAssembly: hasAssembly,
-          assemblyDate: hasAssembly ? formData.assemblyDate : undefined,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send request');
+function ScrollToHash() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
       }
-
-      setSubmitMessage({
-        type: 'success',
-        text: 'Votre demande a été envoyée avec succès! Nous vous recontacterons bientôt.'
-      });
-
-      // Reset form after 2 seconds
-      setTimeout(() => {
-        setIsModalOpen(false);
-        setFormData({
-          residenceName: '',
-          address: '',
-          phone: '',
-          assemblyDate: ''
-        });
-        setHasAssembly(false);
-        setSubmitMessage(null);
-      }, 2000);
-
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitMessage({
-        type: 'error',
-        text: 'Une erreur est survenue. Veuillez réessayer.'
-      });
-    } finally {
-      setIsSubmitting(false);
     }
-  };
+  }, [location]);
+  return null;
+}
 
-  const currentArticle = selectedArticle ? articles.find(a => a.slug === selectedArticle) : null;
-
-  if (currentArticle) {
-    return (
-      <ArticleDetail
-        article={currentArticle}
-        onBack={() => setSelectedArticle(null)}
-        onQuoteClick={() => {
-          setSelectedArticle(null);
-          setIsModalOpen(true);
-        }}
-      />
-    );
-  }
+function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
+  useEffect(() => {
+    document.title = 'CK Syndic Marrakech | Syndic Professionnel & Gestion de Copropriété au Maroc';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'CK Syndic, votre syndic professionnel à Marrakech. Gestion de copropriété transparente, entretien des résidences, sécurité et maintenance. Demandez un devis gratuit.');
+    }
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://www.cksyndic.ma/');
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-primary-50">
@@ -103,7 +46,7 @@ function App() {
               <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Blog</a>
               <a href="#contact" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={onQuoteClick}
                 className="bg-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
               >
                 Devis Gratuit
@@ -133,7 +76,7 @@ function App() {
 
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={onQuoteClick}
                 className="bg-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 flex items-center space-x-2"
               >
                 <span>Démarrer maintenant</span>
@@ -547,7 +490,7 @@ function App() {
       </section>
 
       {/* Blog Section */}
-      <BlogSection onArticleClick={(slug) => setSelectedArticle(slug)} />
+      <BlogSection />
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-700 py-20">
@@ -559,7 +502,7 @@ function App() {
             Contactez CK Syndic dès aujourd'hui pour un devis gratuit et personnalisé de gestion de copropriété
           </p>
           <button
-            onClick={() => setIsModalOpen(true)}
+            onClick={onQuoteClick}
             className="bg-white text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-primary-50 transition-all duration-200 shadow-2xl hover:shadow-3xl inline-flex items-center space-x-2"
           >
             <span>Demander un Devis Gratuit</span>
@@ -605,6 +548,86 @@ function App() {
           </div>
         </div>
       </footer>
+    </div>
+  );
+}
+
+function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasAssembly, setHasAssembly] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
+  const [formData, setFormData] = useState({
+    residenceName: '',
+    address: '',
+    phone: '',
+    assemblyDate: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage(null);
+
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-quote-request`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          residenceName: formData.residenceName,
+          address: formData.address,
+          phone: formData.phone,
+          hasAssembly: hasAssembly,
+          assemblyDate: hasAssembly ? formData.assemblyDate : undefined,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send request');
+      }
+
+      setSubmitMessage({
+        type: 'success',
+        text: 'Votre demande a été envoyée avec succès! Nous vous recontacterons bientôt.'
+      });
+
+      // Reset form after 2 seconds
+      setTimeout(() => {
+        setIsModalOpen(false);
+        setFormData({
+          residenceName: '',
+          address: '',
+          phone: '',
+          assemblyDate: ''
+        });
+        setHasAssembly(false);
+        setSubmitMessage(null);
+      }, 2000);
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitMessage({
+        type: 'error',
+        text: 'Une erreur est survenue. Veuillez réessayer.'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <>
+      <ScrollToHash />
+      <Routes>
+        <Route path="/" element={<HomePage onQuoteClick={() => setIsModalOpen(true)} />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<ArticlePage />} />
+      </Routes>
 
       {/* Modal Devis Gratuit */}
       {isModalOpen && (
@@ -724,7 +747,7 @@ function App() {
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
