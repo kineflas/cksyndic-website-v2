@@ -18,8 +18,14 @@
     },
     "puppeteerArgs": [
       "--no-sandbox",
-      "--disable-setuid-sandbox"
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-web-security",
+      "--disable-features=IsolateOrigins,site-per-process"
     ],
+    "skipThirdPartyRequests": true,
+    "cacheAjaxRequests": false,
+    "waitFor": 2000,
     "crawl": true,
     "include": [
       "/",
