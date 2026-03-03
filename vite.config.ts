@@ -16,7 +16,7 @@ export default defineConfig({
         },
       },
     },
-    cssCodeSplit: false,
+    cssCodeSplit: true,
     minify: 'terser',
     terserOptions: {
       compress: {
