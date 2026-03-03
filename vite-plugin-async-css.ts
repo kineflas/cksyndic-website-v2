@@ -3,14 +3,18 @@ import type { Plugin } from 'vite';
 export function asyncCssPlugin(): Plugin {
   return {
     name: 'vite-plugin-async-css',
+    apply: 'build',
+    enforce: 'post',
     transformIndexHtml: {
       order: 'post',
       handler(html) {
-        return html.replace(
-          /<link rel="stylesheet" crossorigin href="([^"]+)">/g,
-          `<link rel="preload" href="$1" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="$1"></noscript>`
+        const transformed = html.replace(
+          /<link\s+rel="stylesheet"[^>]+href="([^"]+\.css)"[^>]*>/g,
+          (match, cssPath) => {
+            return `<link rel="preload" href="${cssPath}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${cssPath}"></noscript>`;
+          }
         );
+        return transformed;
       },
     },
   };
