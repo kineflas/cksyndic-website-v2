@@ -1,4 +1,4 @@
-import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X } from 'lucide-react';
+import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
@@ -20,7 +20,7 @@ function ScrollToHash() {
 
 function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
   useEffect(() => {
-    document.title = 'CK Syndic Marrakech | Gestion de Copropriété';
+    document.title = 'CK Syndic Marrakech - Syndic professionnel de copropriété';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'CK Syndic, syndic professionnel à Marrakech. Gestion de copropriété transparente, entretien et sécurité de résidences. Devis gratuit.');
@@ -512,7 +512,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <div className="bg-primary-600 rounded-xl p-2.5">
@@ -535,11 +535,37 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Contact</h4>
-              <ul className="space-y-2">
-                <li className="text-slate-400">461 Al Massar, bureau N1, Marrakech 4000</li>
-                <li className="text-slate-400">contact@cksyndic.ma</li>
-                <li className="text-slate-400">07 14 58 55 57</li>
-              </ul>
+              <address className="not-italic space-y-3">
+                <div className="flex items-start space-x-2">
+                  <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-slate-400">461 Al Massar, bureau N1<br />Marrakech 4000, Maroc</p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                  <a href="tel:+212714585557" className="text-slate-400 hover:text-white transition-colors">+212 7 14 58 55 57</a>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                  <a href="mailto:contact@cksyndic.ma" className="text-slate-400 hover:text-white transition-colors">contact@cksyndic.ma</a>
+                </div>
+              </address>
+            </div>
+            <div>
+              <h4 className="text-white font-bold mb-4">Suivez-nous</h4>
+              <div className="flex space-x-4">
+                <a href="" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                  <Facebook className="w-5 h-5 text-slate-400 hover:text-white" />
+                </a>
+                <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                  <Linkedin className="w-5 h-5 text-slate-400 hover:text-white" />
+                </a>
+                <a href="" aria-label="Instagram" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                  <Instagram className="w-5 h-5 text-slate-400 hover:text-white" />
+                </a>
+                <a href="" aria-label="X (Twitter)" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                  <Twitter className="w-5 h-5 text-slate-400 hover:text-white" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
