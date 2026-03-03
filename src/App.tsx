@@ -4,6 +4,7 @@ import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
 import { BlogPage } from './components/BlogPage';
 import { ArticlePage } from './components/ArticlePage';
+import { GestionAdministrative } from './components/GestionAdministrative';
 
 function ScrollToHash() {
   const location = useLocation();
@@ -657,6 +658,7 @@ function App() {
         <Route path="/" element={<HomePage onQuoteClick={() => setIsModalOpen(true)} />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<ArticlePage />} />
+        <Route path="/services/gestion-administrative" element={<GestionAdministrative />} />
       </Routes>
 
       {/* Modal Devis Gratuit */}
