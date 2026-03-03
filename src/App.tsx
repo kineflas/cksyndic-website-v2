@@ -43,7 +43,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
               <a href="#advantages" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Avantages</a>
-              <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Blog</a>
+              <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors" aria-label="Naviguer vers la section blog">Blog</a>
               <a href="#contact" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
               <button
                 onClick={onQuoteClick}
@@ -56,6 +56,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
         </nav>
       </header>
 
+      <main>
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -508,6 +509,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
           </button>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-300 py-12">
@@ -520,17 +522,17 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                 </div>
                 <span className="text-2xl font-bold text-white">CK Syndic</span>
               </div>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed">
                 CK Syndic, votre syndic professionnel à Marrakech. Gestion de copropriété transparente et services de qualité pour votre résidence au Maroc.
               </p>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Services</h4>
               <ul className="space-y-2">
-                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Gestion Administrative</a></li>
-                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Entretien & Maintenance</a></li>
-                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Sécurité</a></li>
-                <li><Link to="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</Link></li>
+                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Gestion Administrative</a></li>
+                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Entretien & Maintenance</a></li>
+                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Sécurité</a></li>
+                <li><Link to="/blog" className="text-slate-300 hover:text-white transition-colors" aria-label="Voir tous les articles du blog">Blog</Link></li>
               </ul>
             </div>
             <div>
@@ -538,18 +540,18 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                  <div className="text-slate-400">
+                  <div className="text-slate-300">
                     <div>461 Al Massar, bureau N1</div>
                     <div>Marrakech 4000, Maroc</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  <a href="tel:+212714585557" className="text-slate-400 hover:text-white transition-colors">+212 7 14 58 55 57</a>
+                  <a href="tel:+212714585557" className="text-slate-300 hover:text-white transition-colors">+212 7 14 58 55 57</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  <a href="mailto:contact@cksyndic.ma" className="text-slate-400 hover:text-white transition-colors">contact@cksyndic.ma</a>
+                  <a href="mailto:contact@cksyndic.ma" className="text-slate-300 hover:text-white transition-colors">contact@cksyndic.ma</a>
                 </div>
               </div>
             </div>
@@ -557,16 +559,16 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               <h4 className="text-white font-bold mb-4">Suivez-nous</h4>
               <div className="flex space-x-4">
                 <a href="" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Facebook className="w-5 h-5 text-slate-400 hover:text-white" />
+                  <Facebook className="w-5 h-5 text-slate-300 hover:text-white" />
                 </a>
                 <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Linkedin className="w-5 h-5 text-slate-400 hover:text-white" />
+                  <Linkedin className="w-5 h-5 text-slate-300 hover:text-white" />
                 </a>
                 <a href="" aria-label="Instagram" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Instagram className="w-5 h-5 text-slate-400 hover:text-white" />
+                  <Instagram className="w-5 h-5 text-slate-300 hover:text-white" />
                 </a>
                 <a href="" aria-label="X (Twitter)" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Twitter className="w-5 h-5 text-slate-400 hover:text-white" />
+                  <Twitter className="w-5 h-5 text-slate-300 hover:text-white" />
                 </a>
               </div>
             </div>
@@ -665,7 +667,8 @@ function App() {
               <h2 className="text-2xl font-bold text-slate-900">Demander un Devis Gratuit</h2>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-slate-400 hover:text-slate-600 transition-colors"
+                className="text-slate-500 hover:text-slate-700 transition-colors"
+                aria-label="Fermer la fenêtre"
               >
                 <X className="w-6 h-6" />
               </button>

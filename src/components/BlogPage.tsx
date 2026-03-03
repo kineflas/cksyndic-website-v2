@@ -22,7 +22,7 @@ export function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-primary-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           to="/"
           className="inline-flex items-center space-x-2 text-slate-600 hover:text-primary-600 mb-8 transition-colors"
@@ -61,9 +61,9 @@ export function BlogPage() {
                       {isMounted ? new Date(article.publishedAt).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
                     </span>
                   </div>
-                  <h2 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2 group-hover:text-primary-600 transition-colors">
                     {article.title}
-                  </h2>
+                  </h3>
                   <p className="text-slate-600 mb-4 line-clamp-3">
                     {article.metaDescription}
                   </p>
@@ -101,7 +101,7 @@ export function BlogPage() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

@@ -71,7 +71,7 @@ export function ArticlePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-blue-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Link
           to="/blog"
           className="inline-flex items-center space-x-2 text-slate-600 hover:text-primary-600 mb-8 transition-colors"
@@ -185,7 +185,7 @@ export function ArticlePage() {
 
         {/* Autres articles du blog */}
         <div className="mt-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">Autres articles du blog</h2>
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Autres articles du blog</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {otherArticles.map((other) => (
               <Link
@@ -201,9 +201,9 @@ export function ArticlePage() {
                     <Calendar className="w-3 h-3" />
                     <span>{new Date(other.publishedAt).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
                   </div>
-                  <h3 className="font-bold text-slate-900 group-hover:text-primary-600 transition-colors line-clamp-2">
+                  <h4 className="font-bold text-slate-900 group-hover:text-primary-600 transition-colors line-clamp-2">
                     {other.title}
-                  </h3>
+                  </h4>
                   <div className="flex items-center text-primary-600 font-semibold mt-3 text-sm">
                     <span>Lire</span>
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -222,7 +222,7 @@ export function ArticlePage() {
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
