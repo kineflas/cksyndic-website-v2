@@ -1,6 +1,6 @@
 import { ArrowLeft, Calendar, Share2 } from 'lucide-react';
 import { Article, ArticleSection as ArticleSectionType } from '../types/article';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface ArticleDetailProps {
   article: Article;
@@ -9,7 +9,10 @@ interface ArticleDetailProps {
 }
 
 export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailProps) {
+  const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
+    setIsMounted(true);
     window.scrollTo(0, 0);
     document.title = `${article.seoTitle} | CK Syndic`;
 
@@ -75,12 +78,12 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
           <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white">
             <div className="flex items-center space-x-2 text-primary-100 mb-4">
               <Calendar className="w-5 h-5" />
-              <span>
-                {new Date(article.publishedAt).toLocaleDateString('fr-FR', {
+              <span suppressHydrationWarning>
+                {isMounted ? new Date(article.publishedAt).toLocaleDateString('fr-FR', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric',
-                })}
+                }) : ''}
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{article.title}</h1>

@@ -371,10 +371,10 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Adresse</h3>
-                    <p className="text-slate-700 leading-relaxed">
-                      461 Al Massar, bureau N1<br />
-                      Marrakech 4000, Maroc
-                    </p>
+                    <div className="text-slate-700 leading-relaxed">
+                      <div>461 Al Massar, bureau N1</div>
+                      <div>Marrakech 4000, Maroc</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -414,10 +414,10 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Horaires</h3>
-                    <p className="text-slate-700 leading-relaxed">
-                      Lundi - Vendredi: 9h00 - 18h00<br />
-                      Samedi: 9h00 - 13h00
-                    </p>
+                    <div className="text-slate-700 leading-relaxed">
+                      <div>Lundi - Vendredi: 9h00 - 18h00</div>
+                      <div>Samedi: 9h00 - 13h00</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -535,10 +535,13 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Contact</h4>
-              <address className="not-italic space-y-3">
+              <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-slate-400">461 Al Massar, bureau N1<br />Marrakech 4000, Maroc</p>
+                  <div className="text-slate-400">
+                    <div>461 Al Massar, bureau N1</div>
+                    <div>Marrakech 4000, Maroc</div>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
@@ -548,7 +551,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
                   <a href="mailto:contact@cksyndic.ma" className="text-slate-400 hover:text-white transition-colors">contact@cksyndic.ma</a>
                 </div>
-              </address>
+              </div>
             </div>
             <div>
               <h4 className="text-white font-bold mb-4">Suivez-nous</h4>
