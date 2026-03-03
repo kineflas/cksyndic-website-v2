@@ -11,7 +11,7 @@ function ScrollToHash() {
     if (location.hash) {
       const el = document.querySelector(location.hash);
       if (el) {
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+        el.scrollIntoView({ behavior: 'smooth' });
       }
     }
   }, [location]);
@@ -38,7 +38,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <img src="/logock.webp" alt="CK Syndic - Syndic professionnel à Marrakech" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} fetchPriority="high" />
+              <img src="/logock.webp" alt="CK Syndic - Syndic professionnel à Marrakech" width="48" height="48" className="h-12 w-auto brightness-0 saturate-100" style={{ filter: 'invert(16%) sepia(98%) saturate(2732%) hue-rotate(215deg) brightness(91%) contrast(92%)' }} fetchPriority="high" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>

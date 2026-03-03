@@ -8,13 +8,13 @@ function fixCssInFile(filePath) {
   content = content.replace(
     /<link\s+rel="stylesheet"([^>]+)href="([^"]+\.css)"([^>]*)>/g,
     (match, before, cssPath, after) => {
-      return `<link rel="preload" href="${cssPath}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${cssPath}"></noscript>`;
+      return `<link rel="stylesheet" href="${cssPath}" fetchpriority="high">`;
     }
   );
 
   if (content !== original) {
     writeFileSync(filePath, content, 'utf-8');
-    console.log(`✅ Fixed CSS blocking in: ${filePath}`);
+    console.log(`✅ Added fetchpriority to CSS in: ${filePath}`);
     return true;
   }
   return false;

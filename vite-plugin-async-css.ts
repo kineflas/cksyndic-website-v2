@@ -8,13 +8,7 @@ export function asyncCssPlugin(): Plugin {
     transformIndexHtml: {
       order: 'post',
       handler(html) {
-        const transformed = html.replace(
-          /<link\s+rel="stylesheet"[^>]+href="([^"]+\.css)"[^>]*>/g,
-          (match, cssPath) => {
-            return `<link rel="preload" href="${cssPath}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${cssPath}"></noscript>`;
-          }
-        );
-        return transformed;
+        return html;
       },
     },
   };
