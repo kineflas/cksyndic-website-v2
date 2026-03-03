@@ -97,7 +97,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                     <Building2 className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900">Résidence Al Manar</h3>
+                    <h2 className="font-bold text-slate-900">Résidence Al Manar</h2>
                     <p className="text-sm text-slate-600">Marrakech</p>
                   </div>
                 </div>
@@ -512,7 +512,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-300 py-12">
+      <footer className="bg-slate-900 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -522,58 +522,58 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                 </div>
                 <span className="text-2xl font-bold text-white">CK Syndic</span>
               </div>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-100 leading-relaxed">
                 CK Syndic, votre syndic professionnel à Marrakech. Gestion de copropriété transparente et services de qualité pour votre résidence au Maroc.
               </p>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Services</h4>
+              <h3 className="text-white font-bold mb-4">Services</h3>
               <ul className="space-y-2">
-                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Gestion Administrative</a></li>
-                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Entretien & Maintenance</a></li>
-                <li><a href="#services" className="text-slate-300 hover:text-white transition-colors">Sécurité</a></li>
-                <li><Link to="/blog" className="text-slate-300 hover:text-white transition-colors" aria-label="Voir tous les articles du blog">Blog</Link></li>
+                <li><a href="#services" className="text-slate-100 hover:text-white transition-colors">Gestion Administrative</a></li>
+                <li><a href="#services" className="text-slate-100 hover:text-white transition-colors">Entretien & Maintenance</a></li>
+                <li><a href="#services" className="text-slate-100 hover:text-white transition-colors">Sécurité</a></li>
+                <li><Link to="/blog" className="text-slate-100 hover:text-white transition-colors" aria-label="Voir tous les articles du blog">Blog</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Contact</h4>
+              <h3 className="text-white font-bold mb-4">Contact</h3>
               <div className="space-y-3">
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
-                  <div className="text-slate-300">
+                  <div className="text-slate-100">
                     <div>461 Al Massar, bureau N1</div>
                     <div>Marrakech 4000, Maroc</div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  <a href="tel:+212714585557" className="text-slate-300 hover:text-white transition-colors">+212 7 14 58 55 57</a>
+                  <a href="tel:+212714585557" className="text-slate-100 hover:text-white transition-colors">+212 7 14 58 55 57</a>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                  <a href="mailto:contact@cksyndic.ma" className="text-slate-300 hover:text-white transition-colors">contact@cksyndic.ma</a>
+                  <a href="mailto:contact@cksyndic.ma" className="text-slate-100 hover:text-white transition-colors">contact@cksyndic.ma</a>
                 </div>
               </div>
             </div>
             <div>
-              <h4 className="text-white font-bold mb-4">Suivez-nous</h4>
+              <h3 className="text-white font-bold mb-4">Suivez-nous</h3>
               <div className="flex space-x-4">
                 <a href="" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Facebook className="w-5 h-5 text-slate-300 hover:text-white" />
+                  <Facebook className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
                 <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Linkedin className="w-5 h-5 text-slate-300 hover:text-white" />
+                  <Linkedin className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
                 <a href="" aria-label="Instagram" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Instagram className="w-5 h-5 text-slate-300 hover:text-white" />
+                  <Instagram className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
                 <a href="" aria-label="X (Twitter)" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Twitter className="w-5 h-5 text-slate-300 hover:text-white" />
+                  <Twitter className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
               </div>
             </div>
           </div>
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500">
+          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
             <p>&copy; 2025 CK Syndic Marrakech. Tous droits réservés.</p>
           </div>
         </div>
