@@ -7,6 +7,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
+    target: 'es2015',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -21,6 +22,9 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+      },
+      format: {
+        ecma: 2015,
       },
     },
   },
