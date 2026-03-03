@@ -205,7 +205,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                 <Building2 className="w-10 h-10 text-primary-600" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-6">Gestion Administrative</h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4 mb-6">
                 <li className="flex items-start space-x-3">
                   <CheckCircle2 className="w-5 h-5 text-primary-600 mt-0.5 flex-shrink-0" />
                   <span className="text-slate-700">Assemblées générales et procès-verbaux</span>
@@ -223,6 +223,13 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <span className="text-slate-700">Suivi des travaux et contrats</span>
                 </li>
               </ul>
+              <Link
+                to="/services/gestion-administrative"
+                className="inline-flex items-center space-x-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+              >
+                <span>En savoir plus</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300">
