@@ -5,6 +5,7 @@ function fixCssInFile(filePath) {
   let content = readFileSync(filePath, 'utf-8');
 
   const original = content;
+
   content = content.replace(
     /<link\s+rel="stylesheet"([^>]+)href="([^"]+\.css)"([^>]*)>/g,
     (match, before, cssPath, after) => {
@@ -12,9 +13,16 @@ function fixCssInFile(filePath) {
     }
   );
 
+  content = content.replace(
+    /<link\s+rel="modulepreload"\s+href="([^"]+react-vendor[^"]+\.js)"\s+crossorigin="">/g,
+    (match, jsPath) => {
+      return `<link rel="modulepreload" href="${jsPath}" crossorigin=""><link rel="preload" href="${jsPath}" as="script" fetchpriority="high">`;
+    }
+  );
+
   if (content !== original) {
     writeFileSync(filePath, content, 'utf-8');
-    console.log(`✅ Added fetchpriority to CSS in: ${filePath}`);
+    console.log(`✅ Optimized resource hints in: ${filePath}`);
     return true;
   }
   return false;

@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { asyncCssPlugin } from './vite-plugin-async-css';
+import { preloadPlugin } from './vite-plugin-preload';
 
 export default defineConfig({
-  plugins: [react(), asyncCssPlugin()],
+  plugins: [react(), asyncCssPlugin(), preloadPlugin()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
@@ -17,7 +18,7 @@ export default defineConfig({
         },
       },
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -28,6 +29,7 @@ export default defineConfig({
         ecma: 2015,
       },
     },
+    reportCompressedSize: false,
   },
   server: {
     open: true,

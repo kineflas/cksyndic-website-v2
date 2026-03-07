@@ -9,7 +9,10 @@
     <meta name="google-site-verification" content="jFjAGySxliJCGmsz3qXLpoUc2bxgTxvOadoJ8gKU8Kg" />
     <link rel="canonical" href="https://www.cksyndic.ma/" />
 
-    <!-- DNS prefetch et preconnect pour Google Analytics -->
+    <!-- DNS prefetch et preconnect -->
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
     <!-- Critical CSS inlined -->
     <style>
       * {
@@ -29,10 +32,23 @@
       #root {
         min-height: 100vh;
       }
+      .loading-spinner {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(0,0,0,.1);
+        border-radius: 50%;
+        border-top-color: #3b82f6;
+        animation: spin 1s ease-in-out infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -25px 0 0 -25px;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
     </style>
-
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
     <!-- Open Graph / Réseaux sociaux -->
     <meta property="og:type" content="website" />
@@ -128,7 +144,9 @@
         <p><strong>Email:</strong> contact@cksyndic.ma</p>
       </div>
     </noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-spinner"></div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
