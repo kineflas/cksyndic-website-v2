@@ -9,10 +9,6 @@
     <meta name="google-site-verification" content="jFjAGySxliJCGmsz3qXLpoUc2bxgTxvOadoJ8gKU8Kg" />
     <link rel="canonical" href="https://www.cksyndic.ma/" />
 
-    <!-- DNS prefetch et preconnect -->
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-
     <!-- Open Graph / Réseaux sociaux -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CK Syndic Marrakech | Gestion de Copropriété" />
@@ -76,29 +72,45 @@
     }
     </script>
 
-    <!-- Google tag (gtag.js) - Chargement asynchrone optimisé -->
+    <!-- Google tag (gtag.js) - Chargement ultra-différé après interaction -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'AW-17948532299');
 
-      // Chargement différé du script Google Tag Manager
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(function() {
-          var script = document.createElement('script');
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17948532299';
-          script.async = true;
-          document.head.appendChild(script);
-        });
-      } else {
-        setTimeout(function() {
-          var script = document.createElement('script');
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17948532299';
-          script.async = true;
-          document.head.appendChild(script);
-        }, 2000);
+      // Variable pour éviter le double chargement
+      let gtagLoaded = false;
+
+      // Fonction pour charger gtag
+      function loadGtag() {
+        if (gtagLoaded) return;
+        gtagLoaded = true;
+
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17948532299';
+        script.async = true;
+        document.head.appendChild(script);
+
+        gtag('config', 'AW-17948532299');
       }
+
+      // Chargement uniquement après interaction utilisateur
+      const events = ['mousedown', 'touchstart', 'scroll', 'keydown'];
+      const loadOnInteraction = function() {
+        loadGtag();
+        events.forEach(function(e) {
+          window.removeEventListener(e, loadOnInteraction);
+        });
+      };
+
+      events.forEach(function(e) {
+        window.addEventListener(e, loadOnInteraction, { passive: true, once: true });
+      });
+
+      // Fallback: chargement après 5 secondes si aucune interaction
+      setTimeout(function() {
+        if (!gtagLoaded) loadGtag();
+      }, 5000);
     </script>
   </head>
   <body>
