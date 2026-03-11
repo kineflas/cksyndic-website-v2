@@ -1,4 +1,4 @@
-import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, Linkedin, Instagram, Twitter, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
@@ -518,6 +518,20 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
         </div>
       </section>
       </main>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/212714585557?text=Bonjour%2C%20je%20vous%20contacte%20pour%20avoir%20plus%20d%27informations%20sur%20vos%20prestations%20de%20Syndic"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110 z-50 group"
+        aria-label="Contactez-nous sur WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7" />
+        <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          Contactez-nous sur WhatsApp
+        </span>
+      </a>
 
       {/* Footer */}
       <footer className="bg-slate-900 py-12">
