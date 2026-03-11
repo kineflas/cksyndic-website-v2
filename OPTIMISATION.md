@@ -53,14 +53,22 @@ import { OptimizedImage } from './components/OptimizedImage';
 ## 2. Optimisation JavaScript
 
 ### Scripts Externes
-- Google Analytics utilise maintenant `defer` au lieu de `async` pour éviter le blocage du rendu
-- Les scripts sont chargés de manière asynchrone
+- **Google Tag Manager** : Chargement différé avec `requestIdleCallback` pour ne pas bloquer le rendu initial
+- Les scripts analytics se chargent après que le navigateur soit en idle (2s de délai sinon)
+- Cela réduit significativement le JavaScript bloquant au premier chargement
 
-### Code Splitting
+### Code Splitting Optimisé
 Configuration dans `vite.config.ts` :
-- Séparation des vendors React en chunk distinct
-- Séparation des icônes Lucide en chunk distinct
-- Minification avec Terser (suppression console.log et debugger)
+- **react-core** : React et JSX runtime séparés (7 KB)
+- **react-dom** : DOM renderer isolé (132 KB)
+- **react-router** : Routing séparé (36 KB)
+- **icons** : Icônes Lucide en chunk distinct (7 KB)
+- **Minification Terser avancée** :
+  - 2 passes de compression
+  - Suppression console.log, console.info, console.debug
+  - Suppression du code mort (dead_code: true)
+  - Suppression des variables inutilisées (unused: true)
+  - Suppression des commentaires
 
 ## 3. Amélioration du Rendu Statique (SEO)
 

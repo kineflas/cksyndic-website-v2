@@ -14,7 +14,9 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'react-core': ['react', 'react/jsx-runtime'],
+          'react-dom': ['react-dom'],
+          'react-router': ['react-router-dom'],
           'icons': ['lucide-react'],
         },
       },
@@ -25,12 +27,21 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        passes: 2,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        dead_code: true,
+        unused: true,
       },
       format: {
         ecma: 2015,
+        comments: false,
+      },
+      mangle: {
+        safari10: true,
       },
     },
     reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     open: true,
