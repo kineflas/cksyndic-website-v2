@@ -36,7 +36,7 @@ export function GestionAdministrative() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Gestion Administrative de Copropriété à Marrakech : Transparence et Rigueur
             </h1>
-            <p className="text-xl text-primary-100 max-w-3xl">
+            <p className="text-xl text-primary-50 max-w-3xl">
               CK Syndic assure la gestion administrative complète de votre copropriété avec professionnalisme, transparence et conformité juridique.
             </p>
           </div>
@@ -236,7 +236,7 @@ export function GestionAdministrative() {
 
               <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center my-12">
                 <h2 className="text-3xl font-bold mb-4">Confiez-nous la Gestion de Votre Copropriété</h2>
-                <p className="text-xl text-primary-100 mb-6 max-w-2xl mx-auto">
+                <p className="text-xl text-primary-50 mb-6 max-w-2xl mx-auto">
                   Profitez d'une gestion administrative rigoureuse et transparente pour votre résidence à Marrakech.
                 </p>
                 <Link

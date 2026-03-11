@@ -76,7 +76,7 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
 
         <article className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white">
-            <div className="flex items-center space-x-2 text-primary-100 mb-4">
+            <div className="flex items-center space-x-2 text-primary-50 mb-4">
               <Calendar className="w-5 h-5" />
               <span suppressHydrationWarning>
                 {isMounted ? new Date(article.publishedAt).toLocaleDateString('fr-FR', {
@@ -87,7 +87,7 @@ export function ArticleDetail({ article, onBack, onQuoteClick }: ArticleDetailPr
               </span>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{article.title}</h1>
-            <p className="text-xl text-primary-100">{article.metaDescription}</p>
+            <p className="text-xl text-primary-50">{article.metaDescription}</p>
           </div>
 
           <div className="px-8 py-12">

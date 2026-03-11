@@ -514,7 +514,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Prêt à Confier la Gestion de Votre Copropriété à Marrakech ?
           </h2>
-          <p className="text-xl text-primary-100 mb-10">
+          <p className="text-xl text-white mb-10">
             Contactez CK Syndic dès aujourd'hui pour un devis gratuit et personnalisé de gestion de copropriété
           </p>
           <button
