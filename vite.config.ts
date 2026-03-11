@@ -2,9 +2,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { asyncCssPlugin } from './vite-plugin-async-css';
 import { preloadPlugin } from './vite-plugin-preload';
+import { inlineCssPlugin } from './vite-plugin-inline-css';
 
 export default defineConfig({
-  plugins: [react(), asyncCssPlugin(), preloadPlugin()],
+  plugins: [react(), asyncCssPlugin(), preloadPlugin(), inlineCssPlugin()],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
