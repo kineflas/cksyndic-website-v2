@@ -4,6 +4,12 @@ Ce document décrit les optimisations implémentées pour améliorer le score Pa
 
 ## 1. Optimisation des Images
 
+### Images Responsives avec srcset
+- Le logo utilise maintenant `srcset` pour servir la taille appropriée selon la densité d'écran
+- `logock-small.webp` (2.2 KB) pour les écrans standards
+- `logock-medium.webp` (4.2 KB) pour les écrans haute densité (Retina)
+- **Économie : 4.3 KB** sur le chargement initial
+
 ### Lazy Loading
 - Toutes les images (sauf le logo principal) utilisent `loading="lazy"` pour le chargement différé
 - Le logo principal utilise `fetchPriority="high"` pour optimiser le LCP (Largest Contentful Paint)
