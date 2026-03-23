@@ -117,7 +117,7 @@ export function OurStory() {
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 text-center mb-3">Recouvrement des charges</h4>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600 mb-2">45% → 95%</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">45% → 80%</div>
                   <p className="text-slate-600">Taux de paiement</p>
                 </div>
               </div>
