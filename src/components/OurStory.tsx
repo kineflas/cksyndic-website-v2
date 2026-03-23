@@ -165,7 +165,7 @@ export function OurStory() {
               href="https://wa.me/212714585557?text=Bonjour%2C%20je%20souhaite%20parler%20de%20ma%20r%C3%A9sidence%20et%20obtenir%20plus%20d%27informations%20sur%20vos%20services%20de%20syndic"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
+              className="bg-green-700 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-800 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Parlons de votre résidence</span>
