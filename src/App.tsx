@@ -395,7 +395,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Adresse</h3>
                     <div className="text-slate-700 leading-relaxed">
-                      <div>461 Al Massar, bureau N1</div>
+                      <div><strong>Adresse :</strong> 461 Al Massar, bureau N1</div>
                       <div>Marrakech 4000, Maroc</div>
                     </div>
                   </div>
@@ -577,7 +577,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                   <div className="text-slate-100">
-                    <div>461 Al Massar, bureau N1</div>
+                    <div><strong>Adresse :</strong> 461 Al Massar, bureau N1</div>
                     <div>Marrakech 4000, Maroc</div>
                   </div>
                 </div>
