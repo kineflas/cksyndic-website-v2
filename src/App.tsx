@@ -140,7 +140,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-slate-900">80%</div>
+                  <div className="text-3xl font-bold text-slate-900">90%</div>
                   <div className="text-sm text-slate-600">Recouvrement</div>
                 </div>
               </div>
