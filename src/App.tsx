@@ -1,4 +1,4 @@
-import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, Linkedin, Instagram, Twitter, MessageCircle } from 'lucide-react';
+import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
@@ -140,8 +140,8 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-slate-900">98%</div>
-                  <div className="text-sm text-slate-600">Satisfaction client</div>
+                  <div className="text-3xl font-bold text-slate-900">80%</div>
+                  <div className="text-sm text-slate-600">Recouvrement</div>
                 </div>
               </div>
             </div>
@@ -596,15 +596,6 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               <div className="flex space-x-4">
                 <a href="https://facebook.com/cksyndic" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
                   <Facebook className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Linkedin className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="Instagram" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Instagram className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="X (Twitter)" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Twitter className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
               </div>
             </div>
