@@ -1,6 +1,6 @@
-import { AlertTriangle, XCircle, Users, TrendingUp, Building2, Shield, Eye, CheckCircle2, ArrowRight } from 'lucide-react';
+import { AlertTriangle, XCircle, Users, TrendingUp, Building2, Shield, Eye, CheckCircle2, MessageCircle } from 'lucide-react';
 
-export function OurStory({ onQuoteClick }: { onQuoteClick: () => void }) {
+export function OurStory() {
   return (
     <section id="notre-histoire" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -161,13 +161,15 @@ export function OurStory({ onQuoteClick }: { onQuoteClick: () => void }) {
             <p className="text-lg text-slate-200 leading-relaxed mb-8">
               Pour continuer à offrir un service fiable et de qualité, nous avons créé CK Syndic. Aujourd'hui, nous accompagnons d'autres résidences à Marrakech et partout au Maroc, pour qu'elles ne vivent plus les mêmes difficultés que nous avons rencontrées.
             </p>
-            <button
-              onClick={onQuoteClick}
-              className="bg-accent-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-700 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
+            <a
+              href="https://wa.me/212714585557?text=Bonjour%2C%20je%20souhaite%20parler%20de%20ma%20r%C3%A9sidence%20et%20obtenir%20plus%20d%27informations%20sur%20vos%20services%20de%20syndic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
             >
+              <MessageCircle className="w-5 h-5" />
               <span>Parlons de votre résidence</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            </a>
             <p className="text-sm text-slate-300 mt-4">
               Diagnostic gratuit, sans engagement
             </p>

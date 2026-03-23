@@ -70,7 +70,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
 
       <main>
       {/* Our Story Section */}
-      <OurStory onQuoteClick={onQuoteClick} />
+      <OurStory />
 
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -594,7 +594,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div>
               <h3 className="text-white font-bold mb-4">Suivez-nous</h3>
               <div className="flex space-x-4">
-                <a href="" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                <a href="https://facebook.com/cksyndic" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
                   <Facebook className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
                 <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
