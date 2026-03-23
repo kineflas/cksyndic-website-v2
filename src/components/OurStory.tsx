@@ -150,7 +150,7 @@ export function OurStory() {
         </div>
 
         {/* Section 5: La création de CK Syndic */}
-        <div className="mb-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+        <div className="mb-20 bg-slate-900 rounded-3xl p-8 md:p-12 shadow-2xl border border-slate-700">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-500 rounded-full mb-6">
               <Building2 className="w-8 h-8 text-slate-900" />
@@ -158,7 +158,7 @@ export function OurStory() {
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Notre expertise devient votre partenaire
             </h3>
-            <p className="text-lg text-white leading-relaxed mb-8">
+            <p className="text-lg text-slate-100 leading-relaxed mb-8">
               Pour continuer à offrir un service fiable et de qualité, nous avons créé CK Syndic. Aujourd'hui, nous accompagnons d'autres résidences à Marrakech et partout au Maroc, pour qu'elles ne vivent plus les mêmes difficultés que nous avons rencontrées.
             </p>
             <a
@@ -170,7 +170,7 @@ export function OurStory() {
               <MessageCircle className="w-5 h-5" />
               <span>Parlons de votre résidence</span>
             </a>
-            <p className="text-sm text-white mt-4">
+            <p className="text-sm text-slate-100 mt-4">
               Diagnostic gratuit, sans engagement
             </p>
           </div>
