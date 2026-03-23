@@ -1,10 +1,11 @@
-import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, Linkedin, Instagram, Twitter, MessageCircle } from 'lucide-react';
+import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
 import { BlogPage } from './components/BlogPage';
 import { ArticlePage } from './components/ArticlePage';
 import { GestionAdministrative } from './components/GestionAdministrative';
+import { OurStory } from './components/OurStory';
 
 function ScrollToHash() {
   const location = useLocation();
@@ -51,6 +52,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <a href="#notre-histoire" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Notre Histoire</a>
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
               <a href="#advantages" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Avantages</a>
               <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors" aria-label="Naviguer vers la section blog">Blog</a>
@@ -67,6 +69,9 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       </header>
 
       <main>
+      {/* Our Story Section */}
+      <OurStory />
+
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -135,8 +140,8 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-slate-900">98%</div>
-                  <div className="text-sm text-slate-600">Satisfaction client</div>
+                  <div className="text-3xl font-bold text-slate-900">90%</div>
+                  <div className="text-sm text-slate-600">Recouvrement</div>
                 </div>
               </div>
             </div>
@@ -390,7 +395,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Adresse</h3>
                     <div className="text-slate-700 leading-relaxed">
-                      <div>461 Al Massar, bureau N1</div>
+                      <div><strong>Adresse :</strong> 461 Al Massar, bureau N1</div>
                       <div>Marrakech 4000, Maroc</div>
                     </div>
                   </div>
@@ -572,7 +577,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                   <div className="text-slate-100">
-                    <div>461 Al Massar, bureau N1</div>
+                    <div><strong>Adresse :</strong> 461 Al Massar, bureau N1</div>
                     <div>Marrakech 4000, Maroc</div>
                   </div>
                 </div>
@@ -589,17 +594,8 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div>
               <h3 className="text-white font-bold mb-4">Suivez-nous</h3>
               <div className="flex space-x-4">
-                <a href="" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
+                <a href="https://facebook.com/cksyndic" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
                   <Facebook className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="LinkedIn" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Linkedin className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="Instagram" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Instagram className="w-5 h-5 text-slate-100 hover:text-white" />
-                </a>
-                <a href="" aria-label="X (Twitter)" className="bg-slate-800 p-2.5 rounded-lg hover:bg-primary-600 transition-colors">
-                  <Twitter className="w-5 h-5 text-slate-100 hover:text-white" />
                 </a>
               </div>
             </div>
