@@ -5,6 +5,7 @@ import { BlogSection } from './components/BlogSection';
 import { BlogPage } from './components/BlogPage';
 import { ArticlePage } from './components/ArticlePage';
 import { GestionAdministrative } from './components/GestionAdministrative';
+import { OurStory } from './components/OurStory';
 
 function ScrollToHash() {
   const location = useLocation();
@@ -51,6 +52,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               />
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <a href="#notre-histoire" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Notre Histoire</a>
               <a href="#services" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Services</a>
               <a href="#advantages" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Avantages</a>
               <a href="#blog" className="text-slate-700 hover:text-primary-600 font-medium transition-colors" aria-label="Naviguer vers la section blog">Blog</a>
@@ -67,6 +69,9 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       </header>
 
       <main>
+      {/* Our Story Section */}
+      <OurStory onQuoteClick={onQuoteClick} />
+
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
