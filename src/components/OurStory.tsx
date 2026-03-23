@@ -150,27 +150,27 @@ export function OurStory() {
         </div>
 
         {/* Section 5: La création de CK Syndic */}
-        <div className="mb-20 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 text-white">
+        <div className="mb-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-full mb-6">
-              <Building2 className="w-8 h-8 text-white" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-500 rounded-full mb-6">
+              <Building2 className="w-8 h-8 text-slate-900" />
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-white">
               Notre expertise devient votre partenaire
             </h3>
-            <p className="text-lg text-slate-200 leading-relaxed mb-8">
+            <p className="text-lg text-white leading-relaxed mb-8">
               Pour continuer à offrir un service fiable et de qualité, nous avons créé CK Syndic. Aujourd'hui, nous accompagnons d'autres résidences à Marrakech et partout au Maroc, pour qu'elles ne vivent plus les mêmes difficultés que nous avons rencontrées.
             </p>
             <a
               href="https://wa.me/212714585557?text=Bonjour%2C%20je%20souhaite%20parler%20de%20ma%20r%C3%A9sidence%20et%20obtenir%20plus%20d%27informations%20sur%20vos%20services%20de%20syndic"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
+              className="bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition-all duration-200 shadow-xl hover:shadow-2xl inline-flex items-center space-x-2"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Parlons de votre résidence</span>
             </a>
-            <p className="text-sm text-slate-300 mt-4">
+            <p className="text-sm text-white mt-4">
               Diagnostic gratuit, sans engagement
             </p>
           </div>
