@@ -69,13 +69,13 @@ nav {
 }
 
 .from-primary-600 {
-  --tw-gradient-from: #0284c7 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(2 132 199 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #1e3a8a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(30 58 138 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-primary-700 {
-  --tw-gradient-to: #0369a1 var(--tw-gradient-to-position);
+  --tw-gradient-to: #1a3078 var(--tw-gradient-to-position);
 }
 
 .text-slate-900 {
@@ -83,7 +83,7 @@ nav {
 }
 
 .text-primary-600 {
-  color: #0284c7;
+  color: #1e3a8a;
 }
 
 .text-white {
