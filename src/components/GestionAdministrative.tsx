@@ -28,7 +28,13 @@ export function GestionAdministrative() {
         </Link>
 
         <article className="bg-white rounded-3xl shadow-xl overflow-hidden">
-          <div className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white">
+          <div
+            className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white"
+            style={{
+              background: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)',
+              backgroundImage: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)'
+            }}
+          >
             <div className="inline-flex items-center space-x-2 bg-white/10 text-white px-4 py-2 rounded-full border border-white/20 mb-6">
               <FileText className="w-4 h-4" />
               <span className="text-sm font-semibold">Service Professionnel</span>
@@ -234,7 +240,13 @@ export function GestionAdministrative() {
                 </div>
               </section>
 
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center my-12">
+              <div
+                className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white text-center my-12"
+                style={{
+                  background: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)',
+                  backgroundImage: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)'
+                }}
+              >
                 <h2 className="text-3xl font-bold mb-4">Confiez-nous la Gestion de Votre Copropriété</h2>
                 <p className="text-xl text-primary-50 mb-6 max-w-2xl mx-auto">
                   Profitez d'une gestion administrative rigoureuse et transparente pour votre résidence à Marrakech.

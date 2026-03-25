@@ -514,7 +514,13 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       <BlogSection />
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-700 py-20">
+      <section
+        className="bg-gradient-to-br from-primary-600 to-primary-700 py-20"
+        style={{
+          background: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)',
+          backgroundImage: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)'
+        }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Prêt à Confier la Gestion de Votre Copropriété à Marrakech ?
