@@ -84,8 +84,8 @@ export function ArticlePage() {
           <div
             className="bg-gradient-to-br from-primary-600 to-primary-700 px-8 py-16 text-white"
             style={{
-              background: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)',
-              backgroundImage: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)'
+              background: 'linear-gradient(to bottom right, #1e3a8a, #1a3078)',
+              backgroundImage: 'linear-gradient(to bottom right, #1e3a8a, #1a3078)'
             }}
           >
             <div className="flex items-center space-x-2 text-primary-50 mb-4">

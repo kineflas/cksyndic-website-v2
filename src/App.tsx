@@ -517,8 +517,8 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       <section
         className="bg-gradient-to-br from-primary-600 to-primary-700 py-20"
         style={{
-          background: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)',
-          backgroundImage: 'linear-gradient(to bottom right, #2563eb, #1d4ed8)'
+          background: 'linear-gradient(to bottom right, #1e3a8a, #1a3078)',
+          backgroundImage: 'linear-gradient(to bottom right, #1e3a8a, #1a3078)'
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

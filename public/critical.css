@@ -69,17 +69,17 @@ nav {
 }
 
 .from-primary-600 {
-  --tw-gradient-from: #2563eb var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(37 99 235 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-from: #1e3a8a var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(30 58 138 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-primary-700 {
-  --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position);
+  --tw-gradient-to: #1a3078 var(--tw-gradient-to-position);
 }
 
 .bg-primary-600 {
-  background-color: #2563eb;
+  background-color: #1e3a8a;
 }
 
 .text-slate-900 {
@@ -87,7 +87,7 @@ nav {
 }
 
 .text-primary-600 {
-  color: #2563eb;
+  color: #1e3a8a;
 }
 
 .text-white {
@@ -191,7 +191,7 @@ nav {
 }
 
 .hover\:bg-primary-50:hover {
-  background-color: #eff6ff;
+  background-color: #f0f4ff;
 }
 
 .hover\:shadow-3xl:hover {
