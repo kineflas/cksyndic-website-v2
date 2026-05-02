@@ -1,17 +1,9 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   // Start true to match SSG pre-rendered HTML (avoids hydration mismatch #418)
   const [isInView, setIsInView] = useState(true);
-
-  useLayoutEffect(() => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    if (rect.top >= window.innerHeight) {
-      setIsInView(false); // hide below-fold elements before first paint
-    }
-  }, []);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -20,6 +12,8 @@ export function useInView(threshold = 0.15) {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
+        } else {
+          setIsInView(false); // initial fire: element below fold
         }
       },
       { threshold }
