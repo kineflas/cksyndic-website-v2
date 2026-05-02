@@ -1,13 +1,14 @@
 import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, MessageCircle, Menu } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { useInView } from './hooks/useInView';
 import { useCounter } from './hooks/useCounter';
-import { BlogSection } from './components/BlogSection';
-import { BlogPage } from './components/BlogPage';
-import { ArticlePage } from './components/ArticlePage';
-import { GestionAdministrative } from './components/GestionAdministrative';
-import { OurStory } from './components/OurStory';
+
+const BlogSection = lazy(() => import('./components/BlogSection').then(m => ({ default: m.BlogSection })));
+const BlogPage = lazy(() => import('./components/BlogPage').then(m => ({ default: m.BlogPage })));
+const ArticlePage = lazy(() => import('./components/ArticlePage').then(m => ({ default: m.ArticlePage })));
+const GestionAdministrative = lazy(() => import('./components/GestionAdministrative').then(m => ({ default: m.GestionAdministrative })));
+const OurStory = lazy(() => import('./components/OurStory').then(m => ({ default: m.OurStory })));
 
 function ContactSection({
   contactForm, setContactForm, isContactSubmitting, contactMessage, handleContactSubmit
@@ -534,7 +535,9 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
 
       <main>
       {/* Our Story Section */}
+      <Suspense fallback={null}>
       <OurStory />
+      </Suspense>
 
       {/* Hero Section */}
       <HeroSection onQuoteClick={onQuoteClick} />
@@ -556,7 +559,9 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
       />
 
       {/* Blog Section */}
+      <Suspense fallback={null}>
       <BlogSection />
+      </Suspense>
 
       {/* CTA Section */}
       <CTASection onQuoteClick={onQuoteClick} />
@@ -711,9 +716,9 @@ function App() {
       <ScrollToHash />
       <Routes>
         <Route path="/" element={<HomePage onQuoteClick={() => setIsModalOpen(true)} />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<ArticlePage />} />
-        <Route path="/services/gestion-administrative" element={<GestionAdministrative />} />
+        <Route path="/blog" element={<Suspense fallback={null}><BlogPage /></Suspense>} />
+        <Route path="/blog/:slug" element={<Suspense fallback={null}><ArticlePage /></Suspense>} />
+        <Route path="/services/gestion-administrative" element={<Suspense fallback={null}><GestionAdministrative /></Suspense>} />
       </Routes>
 
       {/* Modal Devis Gratuit */}
