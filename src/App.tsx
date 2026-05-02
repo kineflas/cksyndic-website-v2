@@ -1,4 +1,4 @@
-import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, MessageCircle } from 'lucide-react';
+import { Building2, Star, Shield, Users, CheckCircle2, Zap, Sparkles, Droplets, Home, Wrench, ArrowRight, TrendingUp, MapPin, Phone, Mail, Clock, X, Facebook, MessageCircle, Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, Link } from 'react-router-dom';
 import { BlogSection } from './components/BlogSection';
@@ -21,6 +21,8 @@ function ScrollToHash() {
 }
 
 function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     document.title = 'CK Syndic Marrakech - Syndic professionnel de copropriété';
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -59,12 +61,39 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
               <a href="#contact" className="text-slate-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
               <button
                 onClick={onQuoteClick}
-                className="bg-accent-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
+                className="bg-primary-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
               >
                 Devis Gratuit
               </button>
             </div>
+            <button
+              className="md:hidden p-2 text-slate-700 hover:text-primary-600 transition-colors rounded-lg hover:bg-primary-50"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Ouvrir le menu de navigation"
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
+          {isMobileMenuOpen && (
+            <div className="md:hidden pb-4 border-t border-slate-100">
+              <div className="flex flex-col space-y-1 pt-3">
+                <a href="#notre-histoire" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl font-medium transition-colors">Notre Histoire</a>
+                <a href="#services" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl font-medium transition-colors">Services</a>
+                <a href="#advantages" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl font-medium transition-colors">Avantages</a>
+                <a href="#blog" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl font-medium transition-colors">Blog</a>
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="px-4 py-3 text-slate-700 hover:text-primary-600 hover:bg-primary-50 rounded-xl font-medium transition-colors">Contact</a>
+                <div className="px-4 pt-2">
+                  <button
+                    onClick={() => { setIsMobileMenuOpen(false); onQuoteClick(); }}
+                    className="w-full bg-primary-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-lg shadow-primary-600/30"
+                  >
+                    Devis Gratuit
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </nav>
       </header>
 
@@ -93,14 +122,17 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
             <div className="flex flex-wrap gap-4">
               <button
                 onClick={onQuoteClick}
-                className="bg-accent-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 flex items-center space-x-2"
+                className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-700 transition-all duration-200 shadow-xl shadow-primary-600/30 hover:shadow-2xl hover:shadow-primary-600/40 flex items-center space-x-2"
               >
                 <span>Démarrer maintenant</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200">
+              <a
+                href="#services"
+                className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50 transition-all duration-200"
+              >
                 Découvrir nos services
-              </button>
+              </a>
             </div>
           </div>
 
