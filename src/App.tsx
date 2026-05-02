@@ -8,7 +8,7 @@ const BlogSection = lazy(() => import('./components/BlogSection').then(m => ({ d
 const BlogPage = lazy(() => import('./components/BlogPage').then(m => ({ default: m.BlogPage })));
 const ArticlePage = lazy(() => import('./components/ArticlePage').then(m => ({ default: m.ArticlePage })));
 const GestionAdministrative = lazy(() => import('./components/GestionAdministrative').then(m => ({ default: m.GestionAdministrative })));
-const OurStory = lazy(() => import('./components/OurStory').then(m => ({ default: m.OurStory })));
+import { OurStory } from './components/OurStory';
 
 function ContactSection({
   contactForm, setContactForm, isContactSubmitting, contactMessage, handleContactSubmit
@@ -535,9 +535,7 @@ function HomePage({ onQuoteClick }: { onQuoteClick: () => void }) {
 
       <main>
       {/* Our Story Section */}
-      <Suspense fallback={null}>
       <OurStory />
-      </Suspense>
 
       {/* Hero Section */}
       <HeroSection onQuoteClick={onQuoteClick} />
