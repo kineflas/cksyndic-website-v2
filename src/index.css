@@ -11,6 +11,11 @@
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+
+  section:not(#hero) {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 600px;
+  }
 }
 
 /* ─── Keyframes ─────────────────────────────────────────────────── */
@@ -235,8 +240,12 @@
 .blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
+  filter: blur(60px);
   pointer-events: none;
   z-index: 0;
   will-change: border-radius;
+}
+
+@media (max-width: 768px) {
+  .blob { display: none; }
 }
