@@ -64,9 +64,15 @@
 }
 
 @keyframes pulse-ring {
-  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(30, 58, 138, 0.3); }
-  70%  { transform: scale(1);    box-shadow: 0 0 0 14px rgba(30, 58, 138, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(30, 58, 138, 0); }
+  0%   { transform: scale(0.95); }
+  70%  { transform: scale(1); }
+  100% { transform: scale(0.95); }
+}
+
+@keyframes pulse-ring-shadow {
+  0%   { transform: scale(1); opacity: 0.3; }
+  70%  { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 0; }
 }
 
 @keyframes checkPop {
@@ -144,7 +150,19 @@
 
   /* Pulse ring */
   .animate-pulse-ring {
+    position: relative;
     animation: pulse-ring 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    will-change: transform;
+  }
+  .animate-pulse-ring::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    background: rgba(30, 58, 138, 0.3);
+    animation: pulse-ring-shadow 2.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    will-change: transform, opacity;
+    pointer-events: none;
   }
 
   /* Checkmark pop */
@@ -155,6 +173,7 @@
   /* Morphing blob */
   .animate-morph {
     animation: morphBlob 10s ease-in-out infinite;
+    will-change: border-radius;
   }
 
   /* Gradient text */
@@ -219,4 +238,5 @@
   filter: blur(80px);
   pointer-events: none;
   z-index: 0;
+  will-change: border-radius;
 }

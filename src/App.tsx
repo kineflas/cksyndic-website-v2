@@ -325,7 +325,7 @@ function HeroSection({ onQuoteClick }: { onQuoteClick: () => void }) {
             <span className="text-sm font-semibold">Syndic professionnel N°1 à Marrakech</span>
           </div>
 
-          <h1 className={`text-5xl lg:text-6xl font-bold text-slate-900 leading-tight reveal delay-100 ${heroInView ? 'in-view' : ''}`}>
+          <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
             Syndic professionnel à{' '}
             <span className="gradient-text">Marrakech</span>
           </h1>
