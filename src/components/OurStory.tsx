@@ -22,7 +22,7 @@ export function OurStory() {
             <div className={`inline-flex items-center justify-center w-16 h-16 bg-amber-100 rounded-full mb-4 reveal ${s1InView ? 'in-view' : ''}`}>
               <AlertTriangle className="w-8 h-8 text-amber-600" />
             </div>
-            <h2 className={`text-4xl md:text-5xl font-bold text-slate-900 reveal delay-100 ${s1InView ? 'in-view' : ''}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
               Vous avez investi dans votre résidence… mais votre syndic vous{' '}
               <span className="gradient-text">déçoit ?</span>
             </h2>
