@@ -8,6 +8,7 @@
     <meta name="description" content="CK Syndic, syndic professionnel à Marrakech. Gestion de copropriété transparente, entretien et sécurité de résidences. Devis gratuit." />
     <meta name="google-site-verification" content="jFjAGySxliJCGmsz3qXLpoUc2bxgTxvOadoJ8gKU8Kg" />
     <link rel="canonical" href="https://www.cksyndic.ma/" />
+    <link rel="preload" as="image" href="/logock-medium.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
@@ -111,10 +112,7 @@
         window.addEventListener(e, loadOnInteraction, { passive: true, once: true });
       });
 
-      // Fallback: chargement après 5 secondes si aucune interaction
-      setTimeout(function() {
-        if (!gtagLoaded) loadGtag();
-      }, 5000);
+      // Pas de fallback automatique — chargement uniquement sur interaction
     </script>
   </head>
   <body>
